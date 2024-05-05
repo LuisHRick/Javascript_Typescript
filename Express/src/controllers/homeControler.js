@@ -9,7 +9,12 @@
 
 
 exports.paginaInicial = (req, res, next) => {
-    res.render('index')
+    res.render(
+        'index', 
+        {
+            titulo: "Este é o título da página"
+        }
+    )
 }
 
 exports.trataPost = (req, res, next) => {

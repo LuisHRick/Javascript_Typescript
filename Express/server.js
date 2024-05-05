@@ -11,7 +11,8 @@ mongoose.connect(process.env.CONNECTION)
     .catch(e => console.log(e))
 
 const session = require('express-session')
-const MongoStore = require('connect-mongo')(session)
+const MongoCon = require('connect-mongo')(session)
+const MongoStore = new MongoCon
 const flash = require('connect-flash')
 
 const routes = require('./routes')
